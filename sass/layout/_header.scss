@@ -1,0 +1,36 @@
+.header{
+	height: 95vh;/*95vh unit allow to take 95 % of view port and leaving 5% empty space in bottom*/
+	background-image:linear-gradient(to right, rgba($color-green, 0.8), rgba($color-violet, 0.8)), 
+	url(https://dx-world.net/wp-content/uploads/2018/05/ex0pl.jpg); 
+	/*background-image:url(./img/hero.jpg);*/
+	background-size: cover;/*cover allow to set 100% of width to cover view port;*/
+	background-position: top;/*top side of content stay same when you shrink browser smaller to big, or opposite*/
+	-webkit-clip-path:polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+	clip-path:polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+	position: relative;
+
+	@include respond(phone){
+		-webkit-clip-path:polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+		clip-path:polygon(0 0, 100% 0, 100% 85vh, 0% 100%);
+	}
+
+	&__logo-box {
+		position:absolute;
+		top:4rem;
+		left:4rem;
+	}
+	&__logo{
+		height:3.5rem;
+		}
+		
+		&__text-box{
+			position: absolute;
+			top:40%;
+			left:50%;
+			
+			transform:translate(-50%, -50%);
+			text-align: center;
+		}
+}
+
+

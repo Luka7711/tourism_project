@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before{
+	margin:0;
+	padding:0;
+	box-sizing:inherit;
+
+}
+
+html{
+	//this define what is 1 rem is
+	font-size: 62.5%;//desktop-first conception. Full size screen of laptop 1800px resolution which is 10px 
+
+@include respond(tab-land){ //width < 1200px (break-points starts from 1800normal - 1200port-land - 900port-tab -600phone 
+		font-size:56.25%;
+	}
+
+
+@include respond(tab-port){ //width  < 900px 
+	font-size:50%;
+}
+
+@include respond(phone){ //width < 600px
+	font-size:35%;
+}
+
+@include respond(big-desktop){
+	font-size:75%;
+}
+}
+
+body{
+	box-sizing:border-box; 
+	padding:3rem;
+	@include respond(tab-port){ //width  < 900px 
+		
+		padding:0;
+	}
+}
+
